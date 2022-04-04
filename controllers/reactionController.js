@@ -8,7 +8,7 @@ module.exports = {
                 res
                 .status(404)
                 .json({ message: 'Reaction created, but found no thought with that ID' }) :
-                res.json('Created the reaction 🎉')
+                res.json(thought)
             )
             .catch((err) => {
                 console.log(err);
