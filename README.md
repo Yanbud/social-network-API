@@ -1,7 +1,7 @@
 # social-network-API
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 ## Description 
-This project is an API for a social network web application where users can share their thoughts, react to friends's thoughts, and create a friend list. 
+This project is an API for a social network web application where users can share their thoughts, react to friends' thoughts, and create a friend list. 
 I used Express.js for routing, a MongoDB database, and the Mongoose ODM. 
 ## Usage
 Users can run the command to start it up: 

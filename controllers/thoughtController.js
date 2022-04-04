@@ -19,32 +19,21 @@ module.exports = {
     createThought(req, res) {
         Thought.create(req.body)
             .then((thought) => {
-                return User.findOneAndUpdate({ _id: req.body.userId }, { $addToSet: { thoughts: thought._id } }, { new: true });
+                User.findOneAndUpdate({ _id: req.body.userId }, { $addToSet: { thoughts: thought._id } }, { new: true });
+                res.json(thought)
             })
-            .then((user) =>
-                !user ?
-                res
-                .status(404)
-                .json({ message: 'Thought created, but found no user with that ID' }) :
-                res.json('Created the thought 🎉')
-            )
-            .catch((err) => {
-                console.log(err);
-                res.status(500).json(err);
-            });
+
+        .catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+        });
     },
     updateThought(req, res) {
         Thought.findOneAndUpdate({ _id: req.params.thoughtId }, { $set: req.body }, { runValidators: true, new: true })
-            .then(() => {
-                return User.findOneAndUpdate({ _id: req.body.userId }, { $set: { thoughts: req.params.thoughtId } }, { new: true });
+            .then((thought) => {
+                User.findOneAndUpdate({ _id: req.body.userId }, { $set: { thoughts: req.params.thoughtId } }, { new: true });
+                res.json(thought)
             })
-            .then((user) =>
-                !user ?
-                res
-                .status(404)
-                .json({ message: 'Thought updated, but found no user with that ID' }) :
-                res.json('Created the thought 🎉')
-            )
             .catch((err) => {
                 console.log(err);
                 res.status(500).json(err);
