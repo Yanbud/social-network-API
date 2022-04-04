@@ -14,7 +14,7 @@ Users can run the command to start it up:
  <p dir="auto"><img src="Screenshot.png" alt="Screenshot" style="max-width: 100%;" /></p>
 
 ## Links
-<p dir="auto"><a href="https://drive.google.com/file/d/1uScwgzrc0a0k0vBBmkU_VqrgLAWJCWLE/view?usp=sharing">Link to the walkthrough video</a></p>
+<p dir="auto"><a href="https://drive.google.com/file/d/1MoT4UwAyFsC-6o8KqYfNQnmh9BON0qLa/view?usp=sharing">Link to the walkthrough video</a></p>
 <p dir="auto"><a href="https://github.com/Yanbud/social-network-API">Link to the code repository</a></p>
 
 ## License
