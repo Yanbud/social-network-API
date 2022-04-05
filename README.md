@@ -6,9 +6,11 @@ I used Express.js for routing, a MongoDB database, and the Mongoose ODM.
 ## Usage
 Users can run the command to start it up: 
 
-`1. node utils/seed.js` 
+`1. npm i` 
 
-`2. node index.js` 
+`2. node utils/seed.js` 
+
+`3. node index.js` 
 
 ## Screenshot
  <p dir="auto"><img src="Screenshot.png" alt="Screenshot" style="max-width: 100%;" /></p>
